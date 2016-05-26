@@ -1,3 +1,6 @@
+This is a fork of https://github.com/stefanvangastel/shipyard-vagrant
+it is being updated to work in 2016
+
 ### Pre-requirements:
 * Vagrant >= 1.6.3 (http://www.vagrantup.com/downloads.html)
 * VirtualBox >= 4.3.10 (https://www.virtualbox.org/)
@@ -6,7 +9,8 @@
 
 Clone this repo:
 
-```$ git clone https://github.com/stefanvangastel/shipyard-vagrant.git```
+```$ git clone https://github.com/buchenberg/shipyard-vagrant.git```
+
 
 Cd into the directory:
 
