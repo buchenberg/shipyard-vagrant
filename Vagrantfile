@@ -10,7 +10,7 @@ Vagrant.require_version ">= 1.6.2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # The number of minions to provision
-  num_minion = 3
+  num_minion = 1
 
   # ip configuration
   master_ip = "10.245.1.2"
@@ -34,6 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     shipyard.vm.box = docker_box[docker_os]["name"]
     shipyard.vm.box_url = docker_box[docker_os]["box_url"]
     shipyard.vm.network "private_network", ip: "#{master_ip}"
+	shipyard.vm.network "forwarded_port", guest: 8080, host: 8181, auto_correct: true
     shipyard.vm.hostname = "shipyard"
     shipyard.vm.provision "shell", path: "provision_shipyard.sh"
 
